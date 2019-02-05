@@ -1,0 +1,392 @@
+
+/* *******************
+*** Stylesheet for Varex Welding Company
+*** Author Branko
+*/
+
+/**********************
+*** Colors used on website
+	LIGHT RED   -   #c41f1f
+	DARK RED    -   #751212
+*/
+
+/**********************
+*** Oswald Google Font
+*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400&subset=latin-ext');
+
+/**********************
+*** Basic reset and common styles
+*** CSS Variables declared    
+*** Typography 
+*/
+:root {
+    box-sizing: border-box;
+    --main-bg-color: #111;
+    --main-font-color: #fff;
+    --section-and-button: #c41f1f;
+    --button-hover: #751212;
+    --link-hover: #333;
+}
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Oswald, Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    font-size: 100%;
+    background-color: #111; /* fallback for css var */
+    background-color: var(--main-bg-color);
+    color: #fff; /* fallback for css */
+    color: var(--main-font-color);
+    height: 100%;
+}
+h1, h2, h3 {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 2em;
+    color: #c41f1f; /* fallback for css var */
+    color: var(--section-and-button);
+}
+h2 {
+    font-size: 1.625em;
+}
+h3 {
+    font-size: 1.35em;
+}
+a:link {
+    color: #fff; /* fallback for css var */
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+a:visited {
+    color: #fff; /* fallback for css var */
+    color: var(--main-font-color);    
+}
+a:hover {
+    color: #333; /* fallback for css var */
+    color: var(--link-hover);
+}
+a:active {
+    outline: none;
+}
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+
+/**********************
+*** Utility classes
+*/
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+} 
+.spacing {
+    padding: 5em 0;
+}
+.button {
+    display: inline-block;
+    background-color: #751212; /* fallback for css var */
+    background-color: var(--section-and-button);
+    color: #fff; /* fallback for css var */
+    color: var(--main-font-color);
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.button:hover {
+    background-color: #c41f1f; /* fallback for css var */
+    background-color: var(--button-hover);
+    color: #fff; /* fallback for css var */
+    color: var(--main-font-color);
+}
+/* 	=============
+	separator  */
+.separator-container {
+    text-align: center;
+    position: relative;
+}
+.separator-container .separator {
+    color: #c41f1f;
+    color: var(--section-and-button);
+    margin: 1em auto;
+    width: 11em;
+}
+.separator-container .separator.line-separator:before, .separator-container .separator.line-separator:after {
+    display: block;
+    width: 40%;
+    content: " ";
+    border: 1px solid #c41f1f;
+    position: relative;
+    top: 17px;
+}
+.separator-container .separator.line-separator:before {
+    float: left;
+}
+.separator-container .separator.line-separator:after {
+    float: right;
+}
+.separator span {
+    font-size: 1.5em;
+}
+/**********************
+*** Page navigation
+*/
+.page-header {
+    background-color: #111; /* fallback for css var */
+    background-color: var(--main-bg-color);
+}
+.logo {
+    display: inline-block;
+    background-color: #111; /* fallback for css var */
+    background-color: var(--main-bg-color);
+    padding: .1em 1em;
+}
+.logo img {
+    width: 200px;
+}
+.nav-button {
+    display: inline-block;
+    background-color: #c41f1f; /* fallback for css var */
+    background-color: var(--section-and-button);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.1em;
+}
+.nav-button--bar-1,
+.nav-button--bar-2,
+.nav-button--bar-3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff; /* fallback for css var */
+    background-color: var(--main-font-color);
+    margin: 6px 0;
+    transition: 0.5s;
+}
+.change .nav-button--bar-1 {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.change .nav-button--bar-2 {
+    opacity: 0;
+}
+.change .nav-button--bar-3 {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+.page-nav {
+    display: none;
+    background-color: #c41f1f; /* fallback for css var */
+    background-color: var(--section-and-button);
+}
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -1px;
+}
+.nav-list > li {
+    display: block;
+}
+.nav-list > li > a {
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    display: block;
+    padding: 1.5em 0 1.5em 1em;
+}
+.active {
+    display: block;
+}
+
+/**********************
+*** Page banner
+*/
+.banner {
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), 
+    rgba(0, 0, 0, .8)), url("../assets/img/banner.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner .container {
+    padding-top: 3em;
+    text-align: center;
+    letter-spacing: 1.3px;
+    text-shadow: .1em .1em .3em #000;
+}
+.call-to-action {
+    font-size: 1.625em;
+    text-transform: uppercase;
+}
+.call-to-action span {
+    color: #c41f1f; /* fallback for css var */
+    color: var(--section-and-button);
+    font-size: 1.5em;
+    display: block;
+}
+
+/**********************
+*** About us
+*/
+.about-us {
+    background: #fff;
+    color: #111; /* fallback for css var */
+    color: var(--main-bg-color);
+    line-height: 1.5;
+}
+.about-us p {
+    color: #333;
+}
+.about-us blockquote {
+    padding: .8em 1em;
+    margin: 0 0 2em;
+    font-size: 1.1em;
+    border-left: 5px solid #c41f1f;
+    border-left: 5px solid var(--section-and-button);
+}
+
+
+
+
+
+
+
+
+
+/**********************
+*** Small Devices
+*/
+@media all and (min-width: 35em) {
+    .container {
+        max-width: 33em;
+        padding: 0;
+    }
+
+} /* end small devices */
+
+
+/**********************
+*** Medium Devices
+*/
+@media all and (min-width: 48em) {
+    .container {
+        max-width: 46em;
+    } 
+
+    /* Page Navigation */
+    .page-header {
+        display: flex;
+        align-items: center;
+    }
+    .nav-button {
+        display: none;
+    }
+    .logo {
+        padding-left: 2em;
+    }
+    .page-nav {
+        display: block;
+        margin-left: auto;
+        padding: .1em .5em;
+    }
+    .nav-list {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+    }
+    .nav-list > li > a {
+        padding: 1.5em 2em;
+    }
+} /* end medium devices */
+
+/**********************
+*** Large Devices
+*/
+@media all and (min-width: 62em) {
+    .container {
+        max-width: 60em;
+    }
+
+    /* Page Navigation */
+    .logo {
+        padding-left: 4em;
+    }
+    .nav-list > li > a {
+        padding-left: 3.5em;
+        padding-right: 3.5em;
+    }
+
+    /* About Us */
+    .about-us .container {
+        display: flex;
+        align-items: flex-start;
+    }
+    .about-us-title {
+        flex: 3;
+    }
+    .about-us-content {
+        flex: 7;
+        padding: 0 2em;
+    }
+    .about-us-content p {
+        margin: 0;
+    }
+    .about-us blockquote {
+        margin-top: 1em;
+    }
+
+
+} /* end large devices */
+
+
+@media all and (min-width: 75em) {
+    .container {
+        max-width: 72em;
+    }
+
+    /* Page Navigation */
+    .logo {
+        padding-left: 5em;
+    }
+    .nav-list > li > a {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+} /* end large devices 
+
+
+/**********************
+*** Large Devices
+*/
+@media all and (min-width: 100em) {
+    .container {
+        max-width: 94em;
+    }
+
+    /* Page Navigation */
+    .logo {
+        padding-left: 7em;
+    }
+    .nav-list > li > a {
+        padding-left: 6em;
+        padding-right: 6em;
+    }
+}
