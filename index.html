@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="sr">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,29 +22,31 @@
             </div>
             <nav class="page-nav">
                 <ul class="nav-list">
-                    <li><a href="o-nama.html" title="Ko je Varex Zvečan">O nama</a></li>
-                    <li><a href="usluge.html" title="Usluge koje pružamo">Usluge</a></li>
-                    <li><a href="radovi.html" title="Neki od naših prethodnih radova">Radovi</a></li>
-                    <li><a href="kontakt.html" title="Kontaktirajte nas radi saradnje">Kontakt</a></li>
+                    <li><a href="#about-us" title="Ko je Varex Zvečan">O&nbsp;nama</a></li>
+                    <li><a href="#services" title="Usluge koje pružamo">Usluge</a></li>
+                    <li><a href="#photo-gallery" title="Neki od naših prethodnih radova">Radovi</a></li>
+                    <li><a href="#contact" title="Kontaktirajte nas radi saradnje">Kontakt</a></li>
                 </ul>
             </nav>
         </header><!-- end Page Header -->
         
-        <div class="container">
+        <div class="container banner-text">
             <h1>Varex Zvečan</h1>
-            <h2>Zavarivanje</h2>
-            <p>Mnogobrojnih legura</p>
-            <p>Reparacija aluminijumskih felni</p>
-            <h2>Izrada</h2>
-            <p>Metalnih konstrukcija</p>
-            <p>Proizvoda od kovanog gvožđa</p>
-            <p class="call-to-action">Pozovite nas 
-                <span>+38165/8 813 302</span>
-            </p>
+            <div class="banner-text-part">
+                <p class="subtitle">Zavarivanje</p>
+                <p>Mnogobrojnih legura</p>
+                <p>Reparacija aluminijumskih felni</p>
+            </div>
+            <div class="banner-text-part">
+                <p class="subtitle">Izrada</p>
+                <p>Metalnih konstrukcija</p>
+                <p>Proizvoda od kovanog gvožđa</p>
+            </div>
+            <p class="call-to-action">+38165/8&nbsp;813&nbsp;302</p>
         </div><!-- end Container -->
     </div><!-- end Page Banner -->
 
-    <article class="about-us spacing">
+    <article id="about-us" class="about-us spacing">
         <div class="container">
             <div class="about-us-title">
                 <h2>O nama</h2>
@@ -66,8 +68,8 @@
         </div><!-- end Container -->
     </article><!-- end About Us-->
 
-    <section class="services">
-        <div class="container">
+    <section id="services" class="services spacing">
+
             <h2>Usluge koje pružamo</h2>
 
             <div class="separator-container">
@@ -76,27 +78,47 @@
                 </div>
             </div><!-- separator-container -->
 
-            <section class="welding">
-                <h3>Zavarivanje</h3>
-                <p>Legura aluminijuma, bakra, prohroma, gusa, čelika, magnezijuma, titanijuma, špijatera.</p>
+            <section class="service">
+                <div class="service-img">
+                    <img src="https://via.placeholder.com/1280x720" alt="Zavarivanje raznih legura">
+                </div>
+                <div class="service-text">
+                    <h3>Zavarivanje</h3>
+                    <p>Legura aluminijuma, bakra, prohroma, gusa, čelika, magnezijuma, titanijuma, špijatera.</p>
+                </div>
             </section>
 
-            <section class="rims">
-                <h3>Reparacija felni</h3>
-                <p>Ispravljanje, varenje i farbanje aluminijumskih felni.</p>
+            <section class="service service-right">
+                <div class="service-img">
+                    <img src="https://via.placeholder.com/1280x720" alt="Reparacija aluminijumskih felni">
+                </div>
+                <div class="service-text">
+                    <h3>Reparacija felni</h3>
+                    <p>Ispravljanje, varenje i farbanje aluminijumskih felni.</p>
+                </div>
             </section>
-            <section class="metal">
-                <h3>Izrada metalnih konstrukcija</h3>
-                <p>Proizvodnja metalnih konstrukcija za različite namene.</p>
+            <section class="service">
+                <div class="service-img">
+                    <img src="https://via.placeholder.com/1280x720" alt="Izrada metalnih konstrukcija">
+                </div>
+                <div class="service-text">
+                    <h3>Izrada metalnih konstrukcija</h3>
+                    <p>Proizvodnja metalnih konstrukcija za različite namene.</p>
+                </div>
             </section>    
-            <section class="iron">
-                <h3>Proizvodi od kovanog gvožđa</h3>
-                <p>Kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
+            <section class="service service-right">
+                <div class="service-img">
+                    <img src="https://via.placeholder.com/1280x720" alt="Kapije, ograde i drugi proizvodi od kovanog gvožđa">
+                </div>
+                <div class="service-text">
+                    <h3>Proizvodi od kovanog gvožđa</h3>
+                    <p>Kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
+                </div>
             </section>
-        </div><!-- end Container -->
+
     </section><!-- end Services -->
 
-    <section class="photo-gallery">
+    <section id="photo-gallery" class="photo-gallery spacing">
         <h2>Galerija naših radova</h2>
 
         <div class="separator-container">
@@ -106,18 +128,66 @@
         </div><!-- separator-container -->
 
         <div class="container">
-            <ul class="gallery-list">
-                <li><a href="#">Kapije</a></li>
-                <li><a href="#">Ograde i gelenderi</a></li>
-                <li><a href="#">Stepeništa</a></li>
-                <li><a href="#">Nameštaj</a></li>
-                <li><a href="#">Reparacija felni</a></li>
-                <li><a href="#">Rolbar</a></li>
-            </ul>
+            <div class="gallery-list">
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Kapije</p>
+                            <p>Razni modeli kapija od kovanog gvožđa.</p>
+                        </div>
+                    </div> 
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Ograde i gelenderi</p>
+                            <p>Spoljašnje i unutrašnje ograde.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Stepeništa</p>
+                            <p>Stepeništa različitog oblika.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Nameštaj</p>
+                            <p>Enterijer različitog oblika i namene.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Felni</p>
+                            <p>Reparacija aluminijumskih felni.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Rolbar</p>
+                            <p>Reparacija rolbara.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+            </div>
         </div><!-- end Container -->
     </section><!-- end Photo Gallery -->
 
-    <section class="video-gallery">
+    <section class="video-gallery spacing">
         <h2>Video galerija</h2>
 
         <div class="separator-container">
@@ -127,29 +197,66 @@
         </div><!-- separator-container -->
 
         <div class="container">
-            <ul class="video-list">
-                <li><a href="#">Felna 1</a></li>
-                <li><a href="#">Felna 2</a></li>
-                <li><a href="#">Felna 3</a></li>
-                <li><a href="#">Felna 4</a></li>
-                <li><a href="#">Felna 5</a></li>
-                <li><a href="#">Automatizacija kapije</a></li>
-            </ul>
+            <div class="gallery-list">
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Felna I</p>
+                            <p>Pre i posle reparacije.</p>
+                        </div>
+                    </div> 
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Felna II</p>
+                            <p>Pre i posle reparacije.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Felna IIII</p>
+                            <p>Pre i posle reparacije.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Felna IV</p>
+                            <p>Pre i posle reparacije.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Felna V</p>
+                            <p>Pre i posle reparacije.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+                <a href="#" class="gallery-item">
+                    <div class="gallery-item-caption">
+                        <div class="gallery-item-content">
+                            <p>Kapija</p>
+                            <p>Automatizacija kapije.</p>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/600" alt="">
+                </a>
+            </div>
         </div><!-- end Container -->
     </section><!-- end Video Gallery -->
 
-    <section class="workshop">
-        <h2>Naša radionica</h2>
-
-        <div class="separator-container">
-            <div class="separator line-separator">
-                <span class="glyphicon">&#10070;</span>
-            </div>
-        </div><!-- separator-container -->
-
-    </section><!-- end Workshop -->
-
-    <section class="contact">
+    <section id="contact" class="contact spacing">
         <div class="container">
             <h2>Kontaktirajte nas</h2>
 
@@ -158,31 +265,64 @@
                     <span class="glyphicon">&#10070;</span>
                 </div>
             </div><!-- separator-container -->
-    
-            <p>Iskoristite formu ispod da stupite u kontakt. Ako ste u žurbi ili ste blizu nas i hoćete da svratite, pozovite nas preko telefonskog broja koji je ispisan ispod.</p>
-            <p>Samostalna zanatska radnja "VAREX"</p>
-            <p>Telfoni: 
-                <span>+38165/88 13 302</span>
-                <span>+38164/359 64 63</span>
-                <span>+37745/681 301</span>
-            </p>
-            <p>Adresa: Bogdana Radenkovića 17, 38227 Zvečan</p>
-            <p>E-mail: varex.zvecan@gmail.com</p>
+            <div class="flex-wrapper">
+                <div class="contact-info">
+                    <p>Iskoristite formu ispod da stupite u kontakt. Ako ste u žurbi ili ste blizu nas i hoćete da svratite, pozovite nas preko telefonskog broja koji je ispisan ispod.</p>
+                    <ul class="info-list">
+                        <li>Samostalna zanatska radnja "VAREX"</li>
+                        <li>Bogdana Radenkovića 17
+                            <br>
+                            38227 Zvečan</li>
+                        <li>+38165/88 13 302
+                            <br>
+                            +38164/359 64 63
+                            <br>
+                            +37745/681 301</li>
+                        <li>varex.zvecan@gmail.com</li>
+                    </ul>
+                </div>  
 
-            <form action="" class="contact-form">
-                <input type="text" name="name" class="form-field" id="name" placeholder="Vaše ime">
-                <input type="email" name="email" class="form-field" id="email" placeholder="Vaš email">
-                <textarea name="message" id="message" class="form-field" placeholder="Vaša poruka..." rows="6"></textarea>
-                <button class="button">Pošalji poruku</button>
-            </form>
+                <form action="" class="contact-form">
+                    <input type="text" name="name" class="form-field" id="name" placeholder="Vaše ime" required>
+                    <input type="email" name="email" class="form-field" id="email" placeholder="Vaš email" required>
+                    <textarea name="message" id="message" class="form-field" placeholder="Vaša poruka..." rows="6" required></textarea>
+                    <input type="submit" class="form-field button" value="Pošalji poruku">
+                </form>
+            </div><!-- end Flex Wrapper -->
         </div><!-- end Container -->
     </section><!-- end Contact -->
 
-    <div class="map"></div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2237.8299613713803!2d20.83962115648098!3d42.90637000293043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ssr!2srs!4v1549371191107" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
 
-    <footer class="page-footer">
+    <footer class="page-footer spacing">
         <div class="container">
-            <p>&copy; 2019 Samostalna zanatska radnja "VAREX", Zvečan. Sva prava zadržana.</p>
+            <div class="footer-info">
+                <div class="footer-info-part">
+                    <p>Pozovite</p>
+                    <p>
+                        +38165/88 13 302
+                        <br>
+                        +38164/359 64 63
+                        <br>
+                        +37745/681 301
+                    </p>
+                </div>
+                <div class="footer-info-part">
+                    <p>Posetite</p>
+                    <p>
+                        Bogdana Radenkovića 17
+                        <br>
+                        38227 Zvečan
+                    </p>
+                </div>
+                <div class="footer-info-part">
+                    <p>Pišite</p>
+                    <p>varex.zvecan@gmail.com</p>
+                </div>
+            </div>
+            <p>&copy; 2019 Samostalna zanatska radnja "VAREX" Zvečan</p>
         </div><!-- end Container -->
     </footer>
 
