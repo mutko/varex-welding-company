@@ -6,6 +6,9 @@
     <meta name="author" content="Za Varex Zvečan Branko Božović">
     <title>Varex Zvečan | Usluge zavarivanja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     
 </head>
@@ -31,7 +34,6 @@
         </header><!-- end Page Header -->
         
         <div class="container banner-text">
-            <h1>Varex Zvečan</h1>
             <div class="banner-text-part">
                 <p class="subtitle">Zavarivanje</p>
                 <p>Mnogobrojnih legura</p>
@@ -44,9 +46,14 @@
             </div>
             <p class="call-to-action">+38165/8&nbsp;813&nbsp;302</p>
         </div><!-- end Container -->
+        <div class="scroll">
+            <a href="#about-us" class="scroll-btn"><i class="fas fa-angle-down"></i></a>
+        </div>
     </div><!-- end Page Banner -->
+    
+    <h1>Varex Zvečan</h1>
 
-    <article id="about-us" class="about-us spacing">
+    <article id="about-us" class="about-us spacing">    
         <div class="container">
             <div class="about-us-title">
                 <h2>O nama</h2>
@@ -57,15 +64,30 @@
                 </div><!-- separator-container -->
             </div>
             <div class="about-us-content">
-                <!-- <p>Samostalna zanatska radnja "VAREX" Zvečan postoji od 2003. godine. -->
                 <p>Osnovna delatnost radnje je proizvodnja metalnih konstrukcija za različite namene. Tu, pre svega, podrazumevamo metalne krovne konstrukcije različitih veličina, oblika i namena, zatim kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
-                <!-- <p>Pored ove delatnosti radnja je usko specijalizovana za reparaturno i proizvodno zavarivanje raznovrsnih metala kao što su aluminijum, legure aluminijuma, prohroma, gusa, magnezijuma, titanijuma, visoko legiranih čelika, špijaltera i ostalih metala.</p>
-                <p>Pored ovih karakteristika po kojima je jedinstvena na prostoru čitavog Kosmeta poseban pečat i originalnost radnji daje savršeno ispravljanje, varenje i farbanje aluminijumskih felni.</p>
-                <p>SZR "Varex" se nalazi u sklopu porodične kuće Milosavljević i u njoj rade vlasnik i članovi njegove porodice, koji su znanje stekli uz svoga oca kojima ima višedecenijsko iskustvo u ovom poslu i koji i dalje aktivno radi.</p> -->
                 <blockquote>Naš cilj je da se iz dana u dan usavršavamo i uvek budemo bar korak ispred konkurencije.</blockquote>
-                <a href="#" class="button">Cela priča o SZR "Varex"</a>
+                <a href="#" id="open" class="button">Cela priča o SZR "Varex"</a>
             </div>
         </div><!-- end Container -->
+        <div id="modal" class="modal" id="modal">
+            <div class="modal-backdrop">
+                <div class="modal-content">
+                        <button class="modal-close button">Zatvori</button>
+                    <div class="modal-heading">
+                        <p>SZR "Varex"</p>
+                    </div>
+                    <div class="modal-body">
+                        <p>Samostalna zanatska radnja "VAREX" Zvečan postoji od 2003. godine.
+                        <p>Osnovna delatnost radnje je proizvodnja metalnih konstrukcija za različite namene. Tu, pre svega, podrazumevamo metalne krovne konstrukcije različitih veličina, oblika i namena, zatim kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
+                        <p>Pored ove delatnosti radnja je usko specijalizovana za reparaturno i proizvodno zavarivanje raznovrsnih metala kao što su aluminijum, legure aluminijuma, prohroma, gusa, magnezijuma, titanijuma, visoko legiranih čelika, špijaltera i ostalih metala.</p>
+                        <p>Pored ovih karakteristika po kojima je jedinstvena na prostoru čitavog Kosmeta poseban pečat i originalnost radnji daje savršeno ispravljanje, varenje i farbanje aluminijumskih felni.</p>
+                        <p>SZR "Varex" se nalazi u sklopu porodične kuće Milosavljević i u njoj rade vlasnik i članovi njegove porodice, koji su znanje stekli uz svoga oca kojima ima višedecenijsko iskustvo u ovom poslu i koji i dalje aktivno radi.</p>
+                        <p>Naš cilj je da se iz dana u dan usavršavamo i uvek budemo bar korak ispred konkurencije.</p>
+                    </div>
+                    <button class="modal-close button">Zatvori</button>
+                </div>
+            </div>
+        </div>
     </article><!-- end About Us-->
 
     <section id="services" class="services spacing">
@@ -300,7 +322,7 @@
         <div class="container">
             <div class="footer-info">
                 <div class="footer-info-part">
-                    <p>Pozovite</p>
+                    <p class="footer-info-title"><i class="fas fa-mobile-alt fa-fw"></i> Pozovite</p>
                     <p>
                         +38165/88 13 302
                         <br>
@@ -310,7 +332,7 @@
                     </p>
                 </div>
                 <div class="footer-info-part">
-                    <p>Posetite</p>
+                    <p class="footer-info-title"><i class="fas fa-map-marker-alt fa-fw"></i> Posetite</p>
                     <p>
                         Bogdana Radenkovića 17
                         <br>
@@ -318,11 +340,11 @@
                     </p>
                 </div>
                 <div class="footer-info-part">
-                    <p>Pišite</p>
+                    <p class="footer-info-title"><i class="fas fa-envelope fa-fw"></i> Pišite</p>
                     <p>varex.zvecan@gmail.com</p>
                 </div>
             </div>
-            <p>&copy; 2019 Samostalna zanatska radnja "VAREX" Zvečan</p>
+            <p class="copy">&copy; 2019 SZR "VAREX" Zvečan</p>
         </div><!-- end Container -->
     </footer>
 
@@ -331,6 +353,16 @@
             document.querySelector('.nav-button').classList.toggle("change");
             document.querySelector('.page-nav').classList.toggle("active");
         })
+
+        let button = document.getElementById('open');
+        let modal = document.getElementById('modal');
+
+        button.addEventListener('click', function (event) {
+            modal.style.display = 'block';
+        });
+        document.querySelector('.modal-close').addEventListener('click', function (event) {
+            modal.style.display = 'none';
+        });
     </script>
 </body>
 </html>
