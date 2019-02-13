@@ -305,36 +305,23 @@ img {
     font-size: 1.1rem;
     border-left: 5px solid #c41f1f;
     border-left: 5px solid var(--section-and-button);
-}
+ }
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: 100;
+    color: #333;
+    border-radius: 0;
+    max-width: 600px;
 }
-.modal-backdrop {
-    position: relative;
-    width: auto;
-    margin: 10px;
-   
-}
-.modal-content {
-    position: relative;
-    background-color: #fff;
-    background-clip: padding-box;
-    outline: 0;
-    padding: 2em 4em;
+.modal-title {
+    color: #c41f1f; /* fallback for css var */
+    color: var(--section-and-button);
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
 }
 .modal-close {
-    cursor: pointer;
+    float: right;
 }
-
 /**********************
 *** Services
 */
@@ -358,6 +345,9 @@ img {
 /**********************
 *** Photo Gallery
 */
+.video-gallery {
+    background: #fff;
+}
 .gallery-item {
     position: relative;
     display: block;
@@ -415,6 +405,14 @@ img {
     padding: 1em 0 1em 1em;
     font-family: Oswald, Helvetica, Arial, sans-serif;
     margin-bottom: 1em;
+}
+
+/**********************
+*** Page Footer
+*/
+.map iframe {
+    border: none;
+    width: 100%;
 }
 
 /**********************
@@ -524,7 +522,10 @@ img {
         padding-top: 1em;
     } 
 
-    
+    /* About us */
+    .modal {
+        max-width: 750px;
+    }
     /* Services */
     .service {
         display: flex;
@@ -630,7 +631,9 @@ img {
     .about-us blockquote {
         margin-top: 1em;
     }
-
+    .modal {
+        max-width: 900px;
+    }
     /* Services*/ 
     .service-text p {
         padding: 0 2.5em;

@@ -9,8 +9,11 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
 </head>
 <body>
     <div class="banner">
@@ -66,28 +69,23 @@
             <div class="about-us-content">
                 <p>Osnovna delatnost radnje je proizvodnja metalnih konstrukcija za različite namene. Tu, pre svega, podrazumevamo metalne krovne konstrukcije različitih veličina, oblika i namena, zatim kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
                 <blockquote>Naš cilj je da se iz dana u dan usavršavamo i uvek budemo bar korak ispred konkurencije.</blockquote>
-                <a href="#" id="open" class="button">Cela priča o SZR "Varex"</a>
+                <a href="#ex1" rel="modal:open" id="open" class="button" >Cela priča o SZR "Varex"</a>
             </div>
         </div><!-- end Container -->
-        <div id="modal" class="modal" id="modal">
-            <div class="modal-backdrop">
-                <div class="modal-content">
-                        <button class="modal-close button">Zatvori</button>
-                    <div class="modal-heading">
-                        <p>SZR "Varex"</p>
-                    </div>
-                    <div class="modal-body">
-                        <p>Samostalna zanatska radnja "VAREX" Zvečan postoji od 2003. godine.
-                        <p>Osnovna delatnost radnje je proizvodnja metalnih konstrukcija za različite namene. Tu, pre svega, podrazumevamo metalne krovne konstrukcije različitih veličina, oblika i namena, zatim kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
-                        <p>Pored ove delatnosti radnja je usko specijalizovana za reparaturno i proizvodno zavarivanje raznovrsnih metala kao što su aluminijum, legure aluminijuma, prohroma, gusa, magnezijuma, titanijuma, visoko legiranih čelika, špijaltera i ostalih metala.</p>
-                        <p>Pored ovih karakteristika po kojima je jedinstvena na prostoru čitavog Kosmeta poseban pečat i originalnost radnji daje savršeno ispravljanje, varenje i farbanje aluminijumskih felni.</p>
-                        <p>SZR "Varex" se nalazi u sklopu porodične kuće Milosavljević i u njoj rade vlasnik i članovi njegove porodice, koji su znanje stekli uz svoga oca kojima ima višedecenijsko iskustvo u ovom poslu i koji i dalje aktivno radi.</p>
-                        <p>Naš cilj je da se iz dana u dan usavršavamo i uvek budemo bar korak ispred konkurencije.</p>
-                    </div>
-                    <button class="modal-close button">Zatvori</button>
-                </div>
-            </div>
-        </div>
+
+        <div id="ex1" class="modal">
+            <p class="modal-title">SZR "Varex"</p>
+
+            <p>Samostalna zanatska radnja "VAREX" Zvečan postoji od 2003. godine.
+            <p>Osnovna delatnost radnje je proizvodnja metalnih konstrukcija za različite namene. Tu, pre svega, podrazumevamo metalne krovne konstrukcije različitih veličina, oblika i namena, zatim kapije, ograde i enterijer od najjednostavnijih modela pa sve do visokokvalitetnih i luksuznih modela od kovanog gvožđa.</p>
+            <p>Pored ove delatnosti radnja je usko specijalizovana za reparaturno i proizvodno zavarivanje raznovrsnih metala kao što su aluminijum, legure aluminijuma, prohroma, gusa, magnezijuma, titanijuma, visoko legiranih čelika, špijaltera i ostalih metala.</p>
+            <p>Pored ovih karakteristika po kojima je jedinstvena na prostoru čitavog Kosmeta poseban pečat i originalnost radnji daje savršeno ispravljanje, varenje i farbanje aluminijumskih felni.</p>
+            <p>SZR "Varex" se nalazi u sklopu porodične kuće Milosavljević i u njoj rade vlasnik i članovi njegove porodice, koji su znanje stekli uz svoga oca kojima ima višedecenijsko iskustvo u ovom poslu i koji i dalje aktivno radi.</p>
+            <p>Naš cilj je da se iz dana u dan usavršavamo i uvek budemo bar korak ispred konkurencije.</p>
+
+            <a href="#" rel="modal:close" class="button modal-close">Zatvori</a>
+        </div><!-- modal -->
+
     </article><!-- end About Us-->
 
     <section id="services" class="services spacing">
@@ -304,7 +302,7 @@
                     </ul>
                 </div>  
 
-                <form action="" class="contact-form">
+                <form action="action_page.php" class="contact-form">
                     <input type="text" name="name" class="form-field" id="name" placeholder="Vaše ime" required>
                     <input type="email" name="email" class="form-field" id="email" placeholder="Vaš email" required>
                     <textarea name="message" id="message" class="form-field" placeholder="Vaša poruka..." rows="6" required></textarea>
@@ -315,7 +313,7 @@
     </section><!-- end Contact -->
 
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2237.8299613713803!2d20.83962115648098!3d42.90637000293043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ssr!2srs!4v1549371191107" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2237.8299613713803!2d20.83962115648098!3d42.90637000293043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ssr!2srs!4v1549371191107" width="800" height="400" allowfullscreen></iframe>
     </div>
 
     <footer class="page-footer spacing">
@@ -348,21 +346,15 @@
         </div><!-- end Container -->
     </footer>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
     <script>
         document.querySelector('.nav-button').addEventListener('click', function myFunction() {
             document.querySelector('.nav-button').classList.toggle("change");
             document.querySelector('.page-nav').classList.toggle("active");
         })
-
-        let button = document.getElementById('open');
-        let modal = document.getElementById('modal');
-
-        button.addEventListener('click', function (event) {
-            modal.style.display = 'block';
-        });
-        document.querySelector('.modal-close').addEventListener('click', function (event) {
-            modal.style.display = 'none';
-        });
     </script>
 </body>
 </html>
