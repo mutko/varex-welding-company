@@ -408,7 +408,7 @@ img {
 }
 
 /**********************
-*** Page Footer
+*** Map
 */
 .map iframe {
     border: none;
@@ -442,10 +442,19 @@ img {
 }
 
 
+/**********************
+*** Kapije Page
+*/
 
+.custom-gallery {
+    overflow: hidden;
+    text-align: center;
+}
 
-
-
+.custom-gallery a {
+    float: left;
+    width: 50%;
+}
 
 
 
@@ -460,6 +469,10 @@ img {
         padding: 0;
     }
 
+    /*  Kapije Page */
+    .custom-gallery a {
+        width: 33.33333333%;
+    }
 } /* end small devices */
 
 
@@ -584,6 +597,12 @@ img {
     .footer-info-part {
         flex: 1;
     }
+
+
+    /*  Kapije Page */
+    .custom-gallery a {
+        width: 25%;
+    }
 } /* end medium devices */
 
 /**********************
@@ -644,6 +663,11 @@ img {
         grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
 
+    /*  Kapije Page */
+    .custom-gallery a {
+        width: 20%;
+    }
+
 } /* end large devices */
 
 
@@ -660,6 +684,8 @@ img {
         padding-left: 5em;
         padding-right: 5em;
     }
+
+    
 } /* end large devices 
 
 
@@ -678,5 +704,10 @@ img {
     .nav-list > li > a {
         padding-left: 6em;
         padding-right: 6em;
+    }
+
+    /*  Kapije Page */
+    .custom-gallery a {
+        width: 14.2857143%;
     }
 }

@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Za Varex Zvečan Branko Božović">
-    <title>Varex Zvečan | Usluge zavarivanja</title>
+    <title>Varex Zvečan | Usluge zavarivanja | Ograde i gelenderi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/blueimp-gallery.min.css" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 
@@ -136,7 +138,16 @@
             </section>
 
     </section><!-- end Services -->
-
+   <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+   <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
     <section id="photo-gallery" class="photo-gallery spacing">
         <h2>Galerija naših radova</h2>
 
@@ -146,65 +157,98 @@
             </div>
         </div><!-- separator-container -->
 
-        <div class="container">
-            <div class="gallery-list">
-                <a href="index-kapije.html#gates" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Kapije</p>
-                            <p>Razni modeli kapija od kovanog gvožđa.</p>
-                        </div>
-                    </div> 
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-ograde.html#fences" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Ograde i gelenderi</p>
-                            <p>Spoljašnje i unutrašnje ograde.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-stepenista.html#stairs" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Stepeništa</p>
-                            <p>Stepeništa različitog oblika.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-namestaj.html#furniture" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Nameštaj</p>
-                            <p>Enterijer različitog oblika i namene.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-felne.html#rims" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felni</p>
-                            <p>Reparacija aluminijumskih felni.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-rolbar.html#rolbar" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Rolbar</p>
-                            <p>Reparacija rolbara.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-            </div>
-        </div><!-- end Container -->
+        <div id="fences" class="custom-gallery">
+            <a href="assets/img/ograde/ograda-1.jpg" title="Ograda 1">
+                <img src="https://via.placeholder.com/500" alt="Ograda 1">
+            </a>
+            <a href="assets/img/ograde/ograda-2.jpg" title="Ograda 2">
+                <img src="https://via.placeholder.com/500" alt="Ograda 2">
+            </a>
+            <a href="assets/img/ograde/ograda-3.jpg" title="Ograda 3">
+                <img src="https://via.placeholder.com/500" alt="Ograda 3">
+            </a>
+            <a href="assets/img/ograde/ograda-4.jpg" title="Ograda 4">
+                <img src="https://via.placeholder.com/500" alt="Ograda 4">
+            </a>
+            <a href="assets/img/ograde/ograda-5.jpg" title="Ograda 5">
+                <img src="https://via.placeholder.com/500" alt="Ograda 5">
+            </a>
+            <a href="assets/img/ograde/ograda-6.jpg" title="Ograda 6">
+                <img src="https://via.placeholder.com/500" alt="Ograda 6">
+            </a>
+            <a href="assets/img/ograde/ograda-7.jpg" title="Ograda 7">
+                <img src="https://via.placeholder.com/500" alt="Ograda 7">
+            </a>
+            <a href="assets/img/ograde/ograda-8.jpg" title="Ograda 8">
+                <img src="https://via.placeholder.com/500" alt="Ograda 8">
+            </a>
+            <a href="assets/img/ograde/ograda-9.jpg" title="Ograda 9">
+                <img src="https://via.placeholder.com/500" alt="Ograda 9">
+            </a>
+            <a href="assets/img/ograde/ograda-10.jpg" title="Ograda 10">
+                <img src="https://via.placeholder.com/500" alt="Ograda 10">
+            </a>
+            <a href="assets/img/ograde/ograda-11.jpg" title="Ograda 11">
+                <img src="https://via.placeholder.com/500" alt="Ograda 11">
+            </a>
+            <a href="assets/img/ograde/ograda-12.jpg" title="Ograda 12">
+                <img src="https://via.placeholder.com/500" alt="Ograda 12">
+            </a>
+            <a href="assets/img/ograde/ograda-13.jpg" title="Ograda 13">
+                <img src="https://via.placeholder.com/500" alt="Ograda 13">
+            </a>
+            <a href="assets/img/ograde/ograda-14.jpg" title="Ograda 14">
+                <img src="https://via.placeholder.com/500" alt="Ograda 14">
+            </a>
+            <a href="assets/img/ograde/ograda-15.jpg" title="Ograda 15">
+                <img src="https://via.placeholder.com/500" alt="Ograda 15">
+            </a>
+            <a href="assets/img/ograde/ograda-16.jpg" title="Ograda 16">
+                <img src="https://via.placeholder.com/500" alt="Ograda 16">
+            </a>
+            <a href="assets/img/ograde/ograda-17.jpg" title="Ograda 17">
+                <img src="https://via.placeholder.com/500" alt="Ograda 17">
+            </a>
+            <a href="assets/img/ograde/ograda-18.jpg" title="Ograda 18">
+                <img src="https://via.placeholder.com/500" alt="Ograda 18">
+            </a>
+            <a href="assets/img/ograde/ograda-19.jpg" title="Ograda 19">
+                <img src="https://via.placeholder.com/500" alt="Ograda 19">
+            </a>
+            <a href="assets/img/ograde/ograda-20.jpg" title="Ograda 20">
+                <img src="https://via.placeholder.com/500" alt="Ograda 20">
+            </a>
+            <a href="assets/img/ograde/ograda-21.jpg" title="Ograda 21">
+                <img src="https://via.placeholder.com/500" alt="Ograda 21">
+            </a>
+            <a href="assets/img/ograde/gelenderi-1.jpg" title="Kovani gelender 1">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 1">
+            </a>
+            <a href="assets/img/ograde/gelenderi-2.jpg" title="Kovani gelender 2">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 2">
+            </a>
+            <a href="assets/img/ograde/gelenderi-3.jpg" title="Kovani gelender 3">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 3">
+            </a>
+            <a href="assets/img/ograde/gelenderi-4.jpg" title="Kovani gelender 4">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 4">
+            </a>
+            <a href="assets/img/ograde/gelenderi-5.jpg" title="Kovani gelender 5">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 5">
+            </a>
+            <a href="assets/img/ograde/gelenderi-6.jpg" title="Kovani gelender 6">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 6">
+            </a>
+            <a href="assets/img/ograde/gelenderi-7.jpg" title="Kovani gelender 7">
+                <img src="https://via.placeholder.com/500" alt="Kovani gelender 7">
+            </a>
+
+        </div>
+
     </section><!-- end Photo Gallery -->
+
+ 
+
 
     <section class="video-gallery spacing">
         <h2>Video galerija</h2>
@@ -349,12 +393,22 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
+    <script src="js/blueimp-gallery.min.js"></script>
     <script>
         document.querySelector('.nav-button').addEventListener('click', function() {
             document.querySelector('.nav-button').classList.toggle("change");
             document.querySelector('.page-nav').classList.toggle("active");
         })
+
+        // blueimp
+        document.getElementById('fences').onclick = function (event) {
+            event = event || window.event;
+            var target = event.target || event.srcElement,
+                link = target.src ? target.parentNode : target,
+                options = {index: link, event: event},
+                links = this.getElementsByTagName('a');
+            blueimp.Gallery(links, options);
+        };
     </script>
 </body>
 </html>
