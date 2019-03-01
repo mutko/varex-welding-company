@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/blueimp-gallery.min.css" />
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 
 </head>
@@ -342,19 +344,27 @@
                 </div>
             </div>
             <p class="copy">&copy; 2019 SZR "VAREX" Zvečan</p>
+            <p class="classloader" id="mylink">Click Here</p>
         </div><!-- end Container -->
-
+        <div id="contenthere"></div>
     </footer>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/blueimp-gallery.min.js"></script>
 
     <script>
-        document.querySelector('.nav-button').addEventListener('click', function() {
-            document.querySelector('.nav-button').classList.toggle("change");
-            document.querySelector('.page-nav').classList.toggle("active");
-        })
+    document.querySelector('.nav-button').addEventListener('click', function() {
+        document.querySelector('.nav-button').classList.toggle("change");
+        document.querySelector('.page-nav').classList.toggle("active");
+    })
+
+    $(document).ready(function(){
+        $('.classloader').click(function(){
+            $('#contenthere').load('/slike.html#gates');
+        });
+    })
+
     </script>
 </body>
 </html>

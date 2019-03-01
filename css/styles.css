@@ -348,6 +348,10 @@ img {
 .video-gallery {
     background: #fff;
 }
+.video-gallery h2 {
+    color: #000; /* fallback for css var */
+    color: var(--main-bg-color);
+}
 .gallery-item {
     position: relative;
     display: block;
