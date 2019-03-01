@@ -1,3 +1,6 @@
+// check for js load
+alert("hello world");
+
 document.getElementById('gates').onclick = function (event) {
     event = event || window.event;
     var target = event.target || event.srcElement,
@@ -6,5 +9,3 @@ document.getElementById('gates').onclick = function (event) {
         links = this.getElementsByTagName('a');
     blueimp.Gallery(links, options);
 };
-
-alert("hello world");
