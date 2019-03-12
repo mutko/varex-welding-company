@@ -95,7 +95,9 @@ img {
     vertical-align: middle;
     border: 0;
 }
-
+video {
+    width: 100%;
+}
 /**********************
 *** Utility classes
 */
@@ -407,10 +409,16 @@ img {
 
 .video-gallery {
     background: #fff;
+    color: #333; /* fallback for css var */
+    color: var(--alt-font-color);
 }
 .video-gallery h2 {
     color: #000; /* fallback for css var */
     color: var(--main-bg-color);
+}
+.video-gallery__item p {
+    text-align: center;
+    margin-top: 0;
 }
 /**********************
 *** Contact
@@ -608,6 +616,16 @@ img {
         border-bottom: 2px solid var(--alt-font-color);
     }
 
+    .video-gallery__item {
+        display: flex;
+    }
+    .video-gallery__item > div {
+        width: 100%;
+        box-sizing: content-box;
+    }
+    .video-gallery__item > div + div {
+        padding-left: 15px;
+    }
     /* .gallery-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(250px, 1fr));
