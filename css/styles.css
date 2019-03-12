@@ -626,6 +626,10 @@ video {
     .video-gallery__item > div + div {
         padding-left: 15px;
     }
+    .kapija video {
+        width: 50%;
+        margin: 0 auto;
+    }
     /* .gallery-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(250px, 1fr));
