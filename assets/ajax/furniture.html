@@ -1,0 +1,62 @@
+        <div id="furniture" class="custom-gallery">
+                <a href="assets/img/namestaj/namestaj-1.jpg" title="Namestaj od kovanog gvožđa 1">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 1">
+                </a>
+                <a href="assets/img/namestaj/namestaj-2.jpg" title="Namestaj od kovanog gvožđa 2">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 2">
+                </a>
+                <a href="assets/img/namestaj/namestaj-3.jpg" title="Namestaj od kovanog gvožđa 3">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 3">
+                </a>
+                <a href="assets/img/namestaj/namestaj-4.jpg" title="Namestaj od kovanog gvožđa 4">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 4">
+                </a>
+                <a href="assets/img/namestaj/namestaj-5.jpg" title="Namestaj od kovanog gvožđa 5">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 5">
+                </a>
+                <a href="assets/img/namestaj/namestaj-6.jpg" title="Namestaj od kovanog gvožđa 6">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 6">
+                </a>
+                <a href="assets/img/namestaj/namestaj-7.jpg" title="Namestaj od kovanog gvožđa 7">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 7">
+                </a>
+                <a href="assets/img/namestaj/namestaj-8.jpg" title="Namestaj od kovanog gvožđa 8">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 8">
+                </a>
+                <a href="assets/img/namestaj/namestaj-9.jpg" title="Namestaj od kovanog gvožđa 9">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 9">
+                </a>
+                <a href="assets/img/namestaj/namestaj-10.jpg" title="Namestaj od kovanog gvožđa 10">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 10">
+                </a>
+                <a href="assets/img/namestaj/namestaj-11.jpg" title="Namestaj od kovanog gvožđa 11">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 11">
+                </a>
+                <a href="assets/img/namestaj/namestaj-12.jpg" title="Namestaj od kovanog gvožđa 12">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 12">
+                </a>
+                <a href="assets/img/namestaj/namestaj-13.jpg" title="Namestaj od kovanog gvožđa 13">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 13">
+                </a>
+                <a href="assets/img/namestaj/namestaj-14.jpg" title="Namestaj od kovanog gvožđa 14">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 14">
+                </a>
+                <a href="assets/img/namestaj/namestaj-15.jpg" title="Namestaj od kovanog gvožđa 15">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 15">
+                </a>
+                <a href="assets/img/namestaj/namestaj-16.jpg" title="Namestaj od kovanog gvožđa 16">
+                    <img src="https://via.placeholder.com/500" alt="Namestaj od kovanog gvožđa 16">
+                </a>
+        
+        </div>
+
+    <script>
+    document.getElementById('furniture').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+    </script>

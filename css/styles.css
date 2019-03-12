@@ -7,7 +7,8 @@
 /**********************
 *** Colors used on website
 	LIGHT RED   -   #c41f1f  rgb(196, 31, 31)
-	DARK RED    -   #751212  rgb(117, 18, 18)
+    DARK RED    -   #751212  rgb(117, 18, 18)
+    LIGHT BLACK -   #333;
 */
 
 /**********************
@@ -24,9 +25,9 @@
     box-sizing: border-box;
     --main-bg-color: #000;
     --main-font-color: #fff;
+    --alt-font-color: #333;
     --section-and-button: #c41f1f;
     --button-hover: #751212;
-    --link-hover: #333;
 }
 *,
 ::before,
@@ -82,7 +83,7 @@ a:visited {
 }
 a:hover {
     color: #333; /* fallback for css var */
-    color: var(--link-hover);
+    color: var(--alt-font-color);
 }
 a:active {
     outline: none;
@@ -102,6 +103,11 @@ img {
     margin: 0 auto;
     padding: 0 1em;
 } 
+.alt-section {
+    background: #fff;
+    color: #000; /* fallback for css var */
+    color: var(--main-bg-color);
+}
 .spacing {
     padding: 5em 0;
 }
@@ -290,14 +296,9 @@ img {
 /**********************
 *** About Us
 */
-.about-us {
-    background: #fff;
-    color: #000; /* fallback for css var */
-    color: var(--main-bg-color);
-    line-height: 1.5;
-}
 .about-us p {
-    color: #333;
+    color: #333; /* fallback var */
+    color: var(--alt-font-color);
 }
 .about-us blockquote {
     padding: .8em 1em;
@@ -307,7 +308,8 @@ img {
     border-left: 5px solid var(--section-and-button);
  }
 .modal {
-    color: #333;
+    color: #333; /* fallback var */
+    color: var(--alt-font-color);
     border-radius: 0;
     max-width: 600px;
 }
@@ -343,25 +345,44 @@ img {
 }
 
 /**********************
-*** Photo Gallery
+*** Photo and Video Gallery
 */
-.video-gallery {
-    background: #fff;
+.gallery-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 20px 0;
 }
-.video-gallery h2 {
-    color: #000; /* fallback for css var */
-    color: var(--main-bg-color);
+.ui-tabs-tab {
+    margin: 10px 0;
+    border-bottom: 2px solid #d4d4d4;
 }
-.gallery-item {
-    position: relative;
+.gallery-list > li > a {
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    color: #333; /* fallback var */
+    color: var(--alt-font-color);
+    font-size: .75rem; 
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: none;
+    user-select: none;
+}
+.ui-state-active,
+.ui-state-hover {
+    border-bottom: 2px solid #333;; /* fallback for css var */
+    border-bottom: 2px solid var(--alt-font-color);
+}
+    /* position: relative;
     display: block;
     overflow: hidden;
     max-width: 450px;
     margin: auto auto 1em;
-    transition: 0.5s;
-}
-.gallery-item:hover {
-    color: #fff; /* fallback for css var */
+    transition: 0.5s; */
+
+/* .gallery-item:hover {
+    color: #fff; 
     color: var(--main-font-color);    
 }
 .gallery-item-caption {
@@ -382,9 +403,15 @@ img {
 .gallery-item-content p:first-child {
     font-weight: 400;
     text-transform: uppercase;
+} */
+
+.video-gallery {
+    background: #fff;
 }
-
-
+.video-gallery h2 {
+    color: #000; /* fallback for css var */
+    color: var(--main-bg-color);
+}
 /**********************
 *** Contact
 */
@@ -564,6 +591,24 @@ img {
 
     /* Photo Gallery */
     .gallery-list {
+        padding: 0 0 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .ui-tabs-tab {
+        margin: 0 20px;
+        border: none;
+    }
+    .gallery-list > li > a {
+        font-size: .8rem; 
+    }
+    .ui-state-active,
+    .ui-state-hover {
+        border-bottom: 2px solid #333;; /* fallback for css var */
+        border-bottom: 2px solid var(--alt-font-color);
+    }
+
+    /* .gallery-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(250px, 1fr));
     }
@@ -576,7 +621,7 @@ img {
     }
     .gallery-item:hover .gallery-item-caption {
         background-color: rgba(196, 31, 31, .8);
-    }
+    } */
 
     /* Contact */
     .flex-wrapper {
@@ -663,14 +708,21 @@ img {
     }
 
     /* Photo Gallery */
-    .gallery-list {
-        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    .ui-tabs-tab {
+        margin: 0 30px;
+    }
+    .gallery-list > li > a {
+        font-size: .85rem; 
     }
 
+    /* .gallery-list {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    } */
+
     /*  Kapije Page */
-    .custom-gallery a {
+    /* .custom-gallery a {
         width: 20%;
-    }
+    } */
 
 } /* end large devices */
 
@@ -711,7 +763,7 @@ img {
     }
 
     /*  Kapije Page */
-    .custom-gallery a {
+    /* .custom-gallery a {
         width: 14.2857143%;
-    }
+    } */
 }

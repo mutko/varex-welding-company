@@ -1,5 +1,4 @@
-
-    <div id="gates" class="custom-gallery">
+    <div id="fences" class="custom-gallery">
         <a href="assets/img/kapije/kapija-1.jpg" title="Kapija 1">
             <img src="https://via.placeholder.com/500" alt="Kapija 1">
         </a>
@@ -43,3 +42,15 @@
             <img src="https://via.placeholder.com/500" alt="Kapija 14">
         </a>
     </div>
+
+
+    <script>
+    document.getElementById('fences').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+    </script>

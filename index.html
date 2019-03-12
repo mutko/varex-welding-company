@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/blueimp-gallery.min.css" />
-
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.min.css" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 
 </head>
@@ -57,7 +57,7 @@
     
     <h1>Varex Zvečan</h1>
 
-    <article id="about-us" class="about-us spacing">    
+    <article id="about-us" class="about-us alt-section spacing">    
         <div class="container">
             <div class="about-us-title">
                 <h2>O nama</h2>
@@ -139,7 +139,19 @@
 
     </section><!-- end Services -->
 
-    <section id="photo-gallery" class="photo-gallery spacing">
+
+        <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+                <div class="slides"></div>
+                <h3 class="title"></h3>
+                <a class="prev">‹</a>
+                <a class="next">›</a>
+                <a class="close">×</a>
+                <a class="play-pause"></a>
+                <ol class="indicator"></ol>
+            </div><!-- blueimp-gallery -->
+            
+    <section id="photo-gallery" class="photo-gallery alt-section spacing">
         <h2>Galerija naših radova</h2>
 
         <div class="separator-container">
@@ -149,66 +161,99 @@
         </div><!-- separator-container -->
 
         <div class="container">
-            <div class="gallery-list">
-                <a href="index-kapije.html#gates" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Kapije</p>
-                            <p>Razni modeli kapija od kovanog gvožđa.</p>
-                        </div>
-                    </div> 
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-ograde.html#fences" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Ograde i gelenderi</p>
-                            <p>Spoljašnje i unutrašnje ograde.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-stepenista.html#stairs" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Stepeništa</p>
-                            <p>Stepeništa različitog oblika.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-namestaj.html#furniture" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Nameštaj</p>
-                            <p>Enterijer različitog oblika i namene.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-felne.html#rims" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felni</p>
-                            <p>Reparacija aluminijumskih felni.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="index-rolbar.html#rolbar" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Rolbar</p>
-                            <p>Reparacija rolbara.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-            </div>
+            <div id="tabs-photo">
+                    
+                <ul class="gallery-list">
+                    <li>
+                        <a href="assets/ajax/fences.html" title="Razni modeli kapija od kovanog gvožđa" class="gallery-item">Kapije</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Ograde&nbsp;i&nbsp;gelenderi</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="assets/ajax/gates.html" class="gallery-item">
+                            <div class="gallery-item-caption">
+                                <div class="gallery-item-content">
+                                    <p>Ograde i gelenderi</p>
+                                    <p>Spoljašnje i unutrašnje ograde.</p>
+                                </div>
+                            </div>
+                            <img src="https://via.placeholder.com/600" alt="">
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="assets/ajax/stairs.html" title="Stepeništa različitog oblika" class="gallery-item">Stepeništa</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="assets/ajax/stairs.html" class="gallery-item">
+                            <div class="gallery-item-caption">
+                                <div class="gallery-item-content">
+                                    <p>Stepeništa</p>
+                                    <p>Stepeništa različitog oblika.</p>
+                                </div>
+                            </div>
+                            <img src="https://via.placeholder.com/600" alt="">
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="assets/ajax/furniture.html" title="Enterijer različitog oblika i namene" class="gallery-item">Nameštaj</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="assets/ajax/furniture.html" class="gallery-item">
+                            <div class="gallery-item-caption">
+                                <div class="gallery-item-content">
+                                    <p>Nameštaj</p>
+                                    <p>Enterijer različitog oblika i namene.</p>
+                                </div>
+                            </div>
+                            <img src="https://via.placeholder.com/600" alt="">
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="assets/ajax/rims.html" title="Reparacija aluminijumskih felni" class="gallery-item">Reparacija&nbsp;felni</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="assets/ajax/rims.html" class="gallery-item">
+                            <div class="gallery-item-caption">
+                                <div class="gallery-item-content">
+                                    <p>Felni</p>
+                                    <p>Reparacija aluminijumskih felni.</p>
+                                </div>
+                            </div>
+                            <img src="https://via.placeholder.com/600" alt="">
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="assets/ajax/rolbar.html" title="Reparacija rolbara" class="gallery-item">Rolbar</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="assets/ajax/rolbar.html" class="gallery-item">
+                            <div class="gallery-item-caption">
+                                <div class="gallery-item-content">
+                                    <p>Rolbar</p>
+                                    <p>Reparacija rolbara.</p>
+                                </div>
+                            </div>
+                            <img src="https://via.placeholder.com/600" alt="">
+                        </a>
+                    </li> -->
+
+                </ul><!-- end Tabs list -->
+            
+            </div><!-- end Tabs -->
         </div><!-- end Container -->
     </section><!-- end Photo Gallery -->
 
-    <section class="video-gallery spacing">
+     <section class="video-gallery spacing">
         <h2>Video galerija</h2>
 
         <div class="separator-container">
@@ -218,62 +263,33 @@
         </div><!-- separator-container -->
 
         <div class="container">
-            <div class="gallery-list">
-                <a href="#" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felna I</p>
-                            <p>Pre i posle reparacije.</p>
-                        </div>
-                    </div> 
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="#" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felna II</p>
-                            <p>Pre i posle reparacije.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="#" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felna IIII</p>
-                            <p>Pre i posle reparacije.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="#" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felna IV</p>
-                            <p>Pre i posle reparacije.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="#" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Felna V</p>
-                            <p>Pre i posle reparacije.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-                <a href="#" class="gallery-item">
-                    <div class="gallery-item-caption">
-                        <div class="gallery-item-content">
-                            <p>Kapija</p>
-                            <p>Automatizacija kapije.</p>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/600" alt="">
-                </a>
-            </div>
+            <div id="tabs-video">
+                    
+                <ul class="gallery-list">
+                    <li>
+                        <a href="assets/ajax/fences.html" title="Razni modeli kapija od kovanog gvožđa" class="gallery-item">Felna&nbsp;I</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Felna&nbsp;II</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Felna&nbsp;III</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Felna&nbsp;IV</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Felna&nbsp;V</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Felna&nbsp;VI</a>
+                    </li>
+                    <li>
+                        <a href="assets/ajax/gates.html" title="Spoljašnje i unutrašnje ograde" class="gallery-item">Automatizacija&nbsp;kapije</a>
+                    </li>
+                </ul>
+
+            </div><!-- end Tabs Video -->
         </div><!-- end Container -->
     </section><!-- end Video Gallery -->
 
@@ -344,13 +360,13 @@
                 </div>
             </div>
             <p class="copy">&copy; 2019 SZR "VAREX" Zvečan</p>
-            <p class="classloader" id="mylink">Click Here</p>
         </div><!-- end Container -->
-        <div id="contenthere"></div>
+
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/blueimp-gallery.min.js"></script>
 
     <script>
@@ -359,23 +375,32 @@
         document.querySelector('.page-nav').classList.toggle("active");
     })
 
-    $(document).ready(function(){
-        $('.classloader').click(function(){
-            $('#contenthere').load('/slike.html#gates');
+
+    $( function() {
+        $( "#tabs-photo" ).tabs({
+            beforeLoad: function( event, ui ) {
+                ui.jqXHR.fail(function() {
+                ui.panel.html(
+                    "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                    "If this wouldn't be a demo." );
+                });
+            },
+            active: 0
         });
-    })
+    } );
 
-    let myLink = document.getElementById('mylink');
-
-    myLink.addEventListener("click", function(){
-
-        let script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = "/js/main.js."; 
-        document.getElementsByTagName("body")[0].appendChild(script);
-        return false;
-
-    })
+    $( function() {
+        $( "#tabs-video" ).tabs({
+            beforeLoad: function( event, ui ) {
+                ui.jqXHR.fail(function() {
+                ui.panel.html(
+                    "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                    "If this wouldn't be a demo." );
+                });
+            },
+            active: 0
+        });
+    } );
     </script>
 </body>
 </html>

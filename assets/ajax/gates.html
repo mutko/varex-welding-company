@@ -1,0 +1,98 @@
+    <div id="gates" class="custom-gallery">
+        <a href="assets/img/ograde/ograda-1.jpg" title="Ograda 1">
+            <img src="https://via.placeholder.com/500" alt="Ograda 1">
+        </a>
+        <a href="assets/img/ograde/ograda-2.jpg" title="Ograda 2">
+            <img src="https://via.placeholder.com/500" alt="Ograda 2">
+        </a>
+        <a href="assets/img/ograde/ograda-3.jpg" title="Ograda 3">
+            <img src="https://via.placeholder.com/500" alt="Ograda 3">
+        </a>
+        <a href="assets/img/ograde/ograda-4.jpg" title="Ograda 4">
+            <img src="https://via.placeholder.com/500" alt="Ograda 4">
+        </a>
+        <a href="assets/img/ograde/ograda-5.jpg" title="Ograda 5">
+            <img src="https://via.placeholder.com/500" alt="Ograda 5">
+        </a>
+        <a href="assets/img/ograde/ograda-6.jpg" title="Ograda 6">
+            <img src="https://via.placeholder.com/500" alt="Ograda 6">
+        </a>
+        <a href="assets/img/ograde/ograda-7.jpg" title="Ograda 7">
+            <img src="https://via.placeholder.com/500" alt="Ograda 7">
+        </a>
+        <a href="assets/img/ograde/ograda-8.jpg" title="Ograda 8">
+            <img src="https://via.placeholder.com/500" alt="Ograda 8">
+        </a>
+        <a href="assets/img/ograde/ograda-9.jpg" title="Ograda 9">
+            <img src="https://via.placeholder.com/500" alt="Ograda 9">
+        </a>
+        <a href="assets/img/ograde/ograda-10.jpg" title="Ograda 10">
+            <img src="https://via.placeholder.com/500" alt="Ograda 10">
+        </a>
+        <a href="assets/img/ograde/ograda-11.jpg" title="Ograda 11">
+            <img src="https://via.placeholder.com/500" alt="Ograda 11">
+        </a>
+        <a href="assets/img/ograde/ograda-12.jpg" title="Ograda 12">
+            <img src="https://via.placeholder.com/500" alt="Ograda 12">
+        </a>
+        <a href="assets/img/ograde/ograda-13.jpg" title="Ograda 13">
+            <img src="https://via.placeholder.com/500" alt="Ograda 13">
+        </a>
+        <a href="assets/img/ograde/ograda-14.jpg" title="Ograda 14">
+            <img src="https://via.placeholder.com/500" alt="Ograda 14">
+        </a>
+        <a href="assets/img/ograde/ograda-15.jpg" title="Ograda 15">
+            <img src="https://via.placeholder.com/500" alt="Ograda 15">
+        </a>
+        <a href="assets/img/ograde/ograda-16.jpg" title="Ograda 16">
+            <img src="https://via.placeholder.com/500" alt="Ograda 16">
+        </a>
+        <a href="assets/img/ograde/ograda-17.jpg" title="Ograda 17">
+            <img src="https://via.placeholder.com/500" alt="Ograda 17">
+        </a>
+        <a href="assets/img/ograde/ograda-18.jpg" title="Ograda 18">
+            <img src="https://via.placeholder.com/500" alt="Ograda 18">
+        </a>
+        <a href="assets/img/ograde/ograda-19.jpg" title="Ograda 19">
+            <img src="https://via.placeholder.com/500" alt="Ograda 19">
+        </a>
+        <a href="assets/img/ograde/ograda-20.jpg" title="Ograda 20">
+            <img src="https://via.placeholder.com/500" alt="Ograda 20">
+        </a>
+        <a href="assets/img/ograde/ograda-21.jpg" title="Ograda 21">
+            <img src="https://via.placeholder.com/500" alt="Ograda 21">
+        </a>
+        <a href="assets/img/ograde/gelenderi-1.jpg" title="Kovani gelender 1">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 1">
+        </a>
+        <a href="assets/img/ograde/gelenderi-2.jpg" title="Kovani gelender 2">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 2">
+        </a>
+        <a href="assets/img/ograde/gelenderi-3.jpg" title="Kovani gelender 3">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 3">
+        </a>
+        <a href="assets/img/ograde/gelenderi-4.jpg" title="Kovani gelender 4">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 4">
+        </a>
+        <a href="assets/img/ograde/gelenderi-5.jpg" title="Kovani gelender 5">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 5">
+        </a>
+        <a href="assets/img/ograde/gelenderi-6.jpg" title="Kovani gelender 6">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 6">
+        </a>
+        <a href="assets/img/ograde/gelenderi-7.jpg" title="Kovani gelender 7">
+            <img src="https://via.placeholder.com/500" alt="Kovani gelender 7">
+        </a>
+
+    </div>
+
+    <script>
+    document.getElementById('gates').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+    </script>

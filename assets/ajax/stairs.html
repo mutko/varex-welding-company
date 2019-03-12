@@ -1,0 +1,46 @@
+    <div id="stairs" class="custom-gallery">
+        <a href="assets/img/stepenista/stepeniste-1.jpg" title="Stepenište 1">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 1">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-2.jpg" title="Stepenište 2">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 2">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-3.jpg" title="Stepenište 3">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 3">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-4.jpg" title="Stepenište 4">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 4">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-5.jpg" title="Stepenište 5">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 5">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-6.jpg" title="Stepenište 6">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 6">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-7.jpg" title="Stepenište 7">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 7">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-8.jpg" title="Stepenište 8">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 8">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-9.jpg" title="Stepenište 9">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 9">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-10.jpg" title="Stepenište 10">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 10">
+        </a>
+        <a href="assets/img/stepenista/stepeniste-11.jpg" title="Stepenište 11">
+            <img src="https://via.placeholder.com/500" alt="Stepenište 11">
+        </a>
+    </div>
+
+    <script>
+    document.getElementById('stairs').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+    </script>

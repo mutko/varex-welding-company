@@ -1,0 +1,31 @@
+    <div id="rolbar" class="custom-gallery">
+        <a href="assets/img/rolbar/rolbar-1.jpg" title="Rolbar 1">
+            <img src="https://via.placeholder.com/500" alt="Rolbar 1">
+        </a>
+        <a href="assets/img/rolbar/rolbar-2.jpg" title="Rolbar 2">
+            <img src="https://via.placeholder.com/500" alt="Rolbar 2">
+        </a>
+        <a href="assets/img/rolbar/rolbar-3.jpg" title="Rolbar 3">
+            <img src="https://via.placeholder.com/500" alt="Rolbar 3">
+        </a>
+        <a href="assets/img/rolbar/rolbar-4.jpg" title="Rolbar 4">
+            <img src="https://via.placeholder.com/500" alt="Rolbar 4">
+        </a>
+        <a href="assets/img/rolbar/rolbar-5.jpg" title="Rolbar 5">
+            <img src="https://via.placeholder.com/500" alt="Rolbar 5">
+        </a>
+        <a href="assets/img/rolbar/rolbar-6.jpg" title="Rolbar 6">
+            <img src="https://via.placeholder.com/500" alt="Rolbar 6">
+        </a>
+    </div>
+
+    <script>
+    document.getElementById('rolbar').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+    </script>
