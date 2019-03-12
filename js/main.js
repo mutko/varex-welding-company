@@ -1,11 +1,58 @@
-// check for js load
-alert("hello world");
+document.querySelector('.nav-button').addEventListener('click', function() {
+    document.querySelector('.nav-button').classList.toggle("change");
+    document.querySelector('.page-nav').classList.toggle("active");
+})
 
-document.getElementById('gates').onclick = function (event) {
-    event = event || window.event;
-    var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {index: link, event: event},
-        links = this.getElementsByTagName('a');
-    blueimp.Gallery(links, options);
-};
+const id = selector => document.getElementById(selector);
+
+const modalOpen = id('open-modal');
+const closeModal = id('close-modal');
+const overlay = id('overlay');
+const modal = id('modal');
+
+modalOpen.addEventListener('click', function() { 
+    overlay.classList.add('active-inline');
+    modal.classList.add('active-inline'); 
+    document.body.style.overflow = "hidden";
+})
+
+closeModal.addEventListener('click', function() {
+overlay.classList.remove('active-inline');
+document.body.style.overflowY = "auto";
+})
+
+// close modal on click outside modal
+window.onclick = function(event) {
+    if (event.target == overlay) {
+        overlay.classList.remove('active-inline');
+        document.body.style.overflowY = "auto";
+    }
+}
+
+$( function() {
+    $( "#tabs-photo" ).tabs({
+        beforeLoad: function( event, ui ) {
+            ui.jqXHR.fail(function() {
+            ui.panel.html(
+                "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                "If this wouldn't be a demo." );
+            });
+        },
+        active: 0
+    });
+} );
+
+$( function() {
+    $( "#tabs-video" ).tabs({
+        beforeLoad: function( event, ui ) {
+            ui.jqXHR.fail(function() {
+            ui.panel.html(
+                "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                "If this wouldn't be a demo." );
+            });
+        },
+        active: 0
+    });
+} );
+
+

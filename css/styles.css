@@ -114,6 +114,7 @@ video {
     padding: 5em 0;
 }
 .button {
+    font-family: Oswald, Helvetica, Arial, sans-serif;
     display: inline-block;
     background-color: #751212; /* fallback for css var */
     background-color: var(--section-and-button);
@@ -230,6 +231,7 @@ video {
     display: block;
 }
 
+
 /**********************
 *** Page banner
 */
@@ -308,24 +310,95 @@ video {
     font-size: 1.1rem;
     border-left: 5px solid #c41f1f;
     border-left: 5px solid var(--section-and-button);
- }
-.modal {
-    color: #333; /* fallback var */
-    color: var(--alt-font-color);
-    border-radius: 0;
-    max-width: 600px;
 }
-.modal-title {
-    color: #c41f1f; /* fallback for css var */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;;
+    background: rgba(0, 0, 0, .7);
+    overflow: auto;
+    z-index: 10;
+    display: none;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+  
+/* hack for centering modal without aboslute positioning */
+.overlay:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.05em;
+}
+.modal {
+    display: none;
+    vertical-align: middle;
+    max-width: 600px;
+    width: 90%;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    color: #333; 
+    color: var(--alt-font-color);
+    z-index: 20;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #000;
+    box-sizing: border-box;
+}
+.modal .modal-title {
+    color: #c41f1f; 
     color: var(--section-and-button);
-    font-size: 2.8rem;
+    margin: 10px 0;
+    font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
 }
-.modal-close {
-    float: right;
+.modal-body p {
+    font-size: 1.2rem;
 }
+.close-modal {
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    width: 36px;
+    height: 36px;
+    background: #c41f1f;
+    background: var(--section-and-button);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.close-modal:hover {
+    background: var(--button-hover);
+}
+.close-modal:focus {
+    outline: none;
+}
+.close-modal::before,
+.close-modal::after {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 6px;
+    height: 25px;
+    width: 2px;
+    background-color: #fff;
+}
+.close-modal::before {
+    transform: rotate(45deg);
+}
+.close-modal::after {
+    transform: rotate(-45deg);
+}
+
 /**********************
 *** Services
 */
@@ -411,6 +484,7 @@ video {
     background: #fff;
     color: #333; /* fallback for css var */
     color: var(--alt-font-color);
+    padding-bottom: 5em;
 }
 .video-gallery h2 {
     color: #000; /* fallback for css var */
@@ -480,6 +554,9 @@ video {
     padding-top: 3em;
 }
 
+.active-inline {
+    display: inline-block;
+}
 
 /**********************
 *** Kapije Page
@@ -578,6 +655,10 @@ video {
     .modal {
         max-width: 750px;
     }
+    .modal-body p {
+        font-size: 1.5rem;
+    }
+
     /* Services */
     .service {
         display: flex;
@@ -626,10 +707,7 @@ video {
     .video-gallery__item > div + div {
         padding-left: 15px;
     }
-    .kapija video {
-        width: 50%;
-        margin: 0 auto;
-    }
+
     /* .gallery-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(250px, 1fr));
@@ -736,7 +814,6 @@ video {
     .gallery-list > li > a {
         font-size: .85rem; 
     }
-
     /* .gallery-list {
         grid-template-columns: repeat(3, minmax(250px, 1fr));
     } */
@@ -763,7 +840,10 @@ video {
         padding-right: 5em;
     }
 
-    
+    .kapija > div {
+        width: 75%;
+        margin: 0 auto;
+    }
 } /* end large devices 
 
 
