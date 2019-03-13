@@ -38,7 +38,7 @@ $( function() {
                 "If this wouldn't be a demo." );
             });
         },
-        active: 0
+        hide: { effect: "fade", duration: 700 }
     });
 } );
 
@@ -51,7 +51,7 @@ $( function() {
                 "If this wouldn't be a demo." );
             });
         },
-        active: 0
+        hide: { effect: "fade", duration: 700 }
     });
 } );
 
