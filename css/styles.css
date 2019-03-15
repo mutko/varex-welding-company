@@ -475,9 +475,24 @@ video {
 .custom-gallery a {
     float: left;
     width: 50%;
+    position: relative;
 }
 .custom-gallery img {
     width: 100%;
+}
+.custom-gallery a:hover {
+    cursor: crosshair;
+}
+.custom-gallery a:hover::after {
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.8;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
 }
 /**********************
 *** Contact

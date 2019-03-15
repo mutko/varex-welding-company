@@ -6,6 +6,7 @@
     <meta name="author" content="Za Varex Zvečan Branko Božović">
     <title>Varex Zvečan | Usluge zavarivanja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/blueimp-gallery.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
@@ -236,21 +237,32 @@
                 </div>
             </div><!-- separator-container -->
             <div class="flex-wrapper">
-                <div class="contact-info">
-                    <p>Iskoristite formu ispod da stupite u kontakt. Ako ste u žurbi ili ste blizu nas i hoćete da svratite, pozovite nas preko telefonskog broja koji je ispisan ispod.</p>
+                <section class="contact-info" itemscope itemtype="http://schema.org/LocalBusiness">
+                    <!-- Image just for microdata, no display on page -->
+                    <img itemprop="image" src="assets/img/strucdata-img.jpg" alt="Front view of workshop" style="display: none"/>
+                    <p>Iskoristite formu da stupite u kontakt. Ako ste u žurbi ili ste blizu nas i hoćete da svratite, pozovite nas preko telefonskog broja koji je ispisan ispod.</p>
                     <ul class="info-list">
-                        <li>Samostalna zanatska radnja "VAREX"</li>
-                        <li>Bogdana Radenkovića 17
+                        <li itemprop="name">Samostalna zanatska radnja "VAREX"</li>
+                        <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">Bogdana Radenkovića 17</span>
                             <br>
-                            38227 Zvečan</li>
-                        <li>+38165/88 13 302
+                            <span itemprop="postalCode">38227</span>
+                            <span itemprop="addressLocality">Zvečan</span>
+                        </li>
+                        <li itemprop="telephone">
+                            +38165/88 13 302
                             <br>
                             +38164/359 64 63
                             <br>
-                            +37745/681 301</li>
-                        <li>varex.zvecan@gmail.com</li>
+                            +37745/681 301
+                        </li>
+                        <li itemprop="email">varex.zvecan@gmail.com</li>
+                        <!-- web just for microdata, no display on page -->
+                        <li style="display: none">Web: <span itemprop="url">http://varex.rs</span></li>
                     </ul>
-                </div>  
+                    <!-- Logo just for microdata, no display on page -->
+                    <img itemprop="logo" src="http://varex.rs/images/logo.png" alt="Varex logo" title="SZR Varex - Zvecan" style="display: none">
+                </section>  
 
                 <form action="action_page.php" class="contact-form">
                     <input type="text" name="name" class="form-field" id="name" placeholder="Vaše ime" required>
@@ -304,6 +316,24 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/blueimp-gallery.min.js"></script>
     <script src="js/main.js"></script>
-
+    <!-- google knowledge graph -->
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "SZR Varex",
+          "address": {
+            "@type": "PostalAddress",
+           "addressLocality": "Zvečan",
+            "postalCode":"38227",
+            "streetAddress": "Bogdana Radenkovića 17"
+          },
+          "image": "http://www.varex.rs/assets/img/strucdata-img.jpg",
+          "description": "Proizvodnja metalnih konstrukcija za različite namene, reparaturno i proizvodno zavarivanje raznovrsnih metala, reparacija aluminijumskih felni",
+          "url": "http://www.varex.rs",
+          "telephone": "+381-658813302",
+          "logo": "http://www.varex.rs/images/logo.png"
+        }
+    </script>
 </body>
 </html>
