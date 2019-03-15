@@ -267,11 +267,17 @@ video {
     letter-spacing: 1.2px;
 }
 .call-to-action {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    text-shadow: 2px 2px #000;
+    position: relative;
+}
+.call-to-action span {
     font-size: 2.5rem;
     color: #c41f1f; /* fallback for css var */
     color: var(--section-and-button);
-    font-weight: 400;
-    margin-bottom: 0;
 }
 .scroll {
     text-align: center;
@@ -420,7 +426,9 @@ video {
 .service:last-child .service-text {
     padding-bottom: 0;
 }
-
+.service-img img {
+    width: 100%;
+}
 /**********************
 *** Photo and Video Gallery
 */
