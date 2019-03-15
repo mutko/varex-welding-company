@@ -466,6 +466,20 @@ video {
     margin-top: 0;
 }
 /**********************
+*** Custom galleries
+*/
+.custom-gallery {
+    overflow: hidden;
+    text-align: center;
+}
+.custom-gallery a {
+    float: left;
+    width: 50%;
+}
+.custom-gallery img {
+    width: 100%;
+}
+/**********************
 *** Contact
 */
 .contact {
@@ -537,22 +551,6 @@ video {
 .active-inline {
     display: inline-block;
 }
-
-/**********************
-*** Kapije Page
-*/
-
-.custom-gallery {
-    overflow: hidden;
-    text-align: center;
-}
-
-.custom-gallery a {
-    float: left;
-    width: 50%;
-}
-
-
 
 
 
@@ -712,11 +710,11 @@ video {
         flex: 1;
     }
 
-
-    /*  Kapije Page */
+    /*  Custom gallery */
     .custom-gallery a {
         width: 25%;
     }
+
 } /* end medium devices */
 
 /**********************
@@ -780,10 +778,10 @@ video {
         font-size: .85rem; 
     }
 
-    /*  Kapije Page */
-    /* .custom-gallery a {
-        width: 20%;
-    } */
+    /*  Custom gallery */
+    .custom-gallery a {
+        width: 16.6666667%;
+    }
 
 } /* end large devices */
 
@@ -825,9 +823,4 @@ video {
         padding-left: 6em;
         padding-right: 6em;
     }
-
-    /*  Kapije Page */
-    /* .custom-gallery a {
-        width: 14.2857143%;
-    } */
 }
