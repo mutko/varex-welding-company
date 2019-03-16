@@ -238,8 +238,8 @@ video {
 */
 .banner {
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), 
-    rgba(0, 0, 0, .5)), url("../assets/img/banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .75), 
+    rgba(0, 0, 0, .75)), url("../assets/img/banner.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -411,7 +411,6 @@ video {
 */
 .services {
     text-align: center;
-    padding-top: 5em;
 }
 .service-text {
     padding: 2em 1em 6em;
@@ -664,6 +663,9 @@ video {
     .service {
         display: flex;
         align-items: center;
+    }
+    .services.spacing {
+        padding-bottom: 0;
     }
     .service-img {
         flex: 1
