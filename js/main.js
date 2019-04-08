@@ -1,14 +1,14 @@
-document.querySelector('.nav-button').addEventListener('click', function() {
-    document.querySelector('.nav-button').classList.toggle("change");
-    document.querySelector('.page-nav').classList.toggle("active");
-})
-
 const id = selector => document.getElementById(selector);
 
 const modalOpen = id('open-modal');
 const closeModal = id('close-modal');
 const overlay = id('overlay');
 const modal = id('modal');
+
+document.querySelector('.nav-button').addEventListener('click', function() {
+    document.querySelector('.nav-button').classList.toggle("change");
+    document.querySelector('.page-nav').classList.toggle("active");
+})
 
 modalOpen.addEventListener('click', function() { 
     overlay.classList.add('active-inline');
