@@ -1,0 +1,49 @@
+<div id="metal" class="custom-gallery">
+  <a href="assets/img/metal/metal-9.jpg" title="metal 9">
+    <img src="assets/img/metal/metal-9.jpg" alt="metal 9">
+  </a>
+  <a href="assets/img/metal/metal-1.jpg" title="metal 1">
+      <img src="assets/img/metal/metal-1.jpg" alt="metal 1">
+  </a>
+  <a href="assets/img/metal/metal-2.jpg" title="metal 2">
+      <img src="assets/img/metal/metal-2.jpg" alt="metal 2">
+  </a>
+  <a href="assets/img/metal/metal-3.jpg" title="metal 3">
+      <img src="assets/img/metal/metal-3.jpg" alt="metal 3">
+  </a>
+  <a href="assets/img/metal/metal-4.jpg" title="metal 4">
+      <img src="assets/img/metal/metal-4.jpg" alt="metal 4">
+  </a>
+  <a href="assets/img/metal/metal-5.jpg" title="metal 5">
+      <img src="assets/img/metal/metal-5.jpg" alt="metal 5">
+  </a>
+  <a href="assets/img/metal/metal-6.jpg" title="metal 6">
+      <img src="assets/img/metal/metal-6.jpg" alt="metal 6">
+  </a>
+  <a href="assets/img/metal/metal-7.jpg" title="metal 7">
+    <img src="assets/img/metal/metal-7.jpg" alt="metal 7">
+  </a>
+  <!-- <a href="assets/img/metal/metal-8.jpg" title="metal 8">
+    <img src="assets/img/metal/metal-8.jpg" alt="metal 8">
+  </a> -->
+  <a href="assets/img/metal/metal-10.jpg" title="metal 10">
+    <img src="assets/img/metal/metal-10.jpg" alt="metal 10">
+  </a>
+  <a href="assets/img/metal/metal-11.jpg" title="metal 11">
+    <img src="assets/img/metal/metal-11.jpg" alt="metal 11">
+  </a>
+  <a href="assets/img/metal/metal-12.jpg" title="metal 12">
+    <img src="assets/img/metal/metal-12.jpg" alt="metal 12">
+  </a>
+</div>
+
+<script>
+document.getElementById('metal').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>

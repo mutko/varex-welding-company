@@ -267,6 +267,7 @@ video {
 .banner-text {
     text-align: center;
     text-shadow: .1em .1em .3em #000;
+    width: 100%;
     position: absolute;
     top: 55%;
     left: 50%;
@@ -612,8 +613,6 @@ video {
     display: inline-block;
 }
 
-
-
 /**********************
 *** Small Devices
 */
@@ -633,6 +632,11 @@ video {
 /**********************
 *** Medium Devices
 */
+@media all and (min-width: 48em) and (max-width: 62em) {
+    .hide-m {
+        display: none;
+    }
+}
 @media all and (min-width: 48em) {
     .container {
         max-width: 46em;
@@ -670,29 +674,14 @@ video {
     .nav-list > li > a {
         padding: 1.5em 2em;
     }
-    /* Page Banner */
-    .banner-text {
-        width: 100%;
-    }
-    .banner-text-part + .banner-text-part {
-        padding-top: 0;
-    }
     .banner-text .subtitle {
         font-size: 3rem;
     }
     .banner-text-part p {
         font-size: 2rem;
-    }
-    .banner-text-part {
-        float: left;
-        text-align: left;
-    }
-    .banner-text-part + .banner-text-part {
-        float: right;
-        text-align: right;
+        padding-bottom: .5rem;
     }
     .call-to-action {
-        clear: both;
         font-size: 3rem;
         padding-top: 1em;
     } 
@@ -748,8 +737,9 @@ video {
                 justify-content: center;
     }
     .ui-tabs-tab {
-        margin: 0 20px;
+        margin: 0 8px;
         border: none;
+        text-align: center;
     }
     .gallery-list > li > a {
         font-size: .8rem; 
@@ -878,7 +868,7 @@ video {
 
     /* Photo Gallery */
     .ui-tabs-tab {
-        margin: 0 30px;
+        margin: 0 20px;
     }
     .gallery-list > li > a {
         font-size: .85rem; 
